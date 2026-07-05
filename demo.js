@@ -75,7 +75,7 @@ import { createApp } from 'https://unpkg.com/vue@3/dist/vue.esm-browser.js'
                     var item = this.items[i];
                     if(confirm('确定删除'+this.items[i].name+'吗')){
                         await axios.delete(`http://localhost:3000/employees/${item.id}`);
-                        this.item.splice(i, 1);
+                        this.items.splice(i, 1);
                     }
                 },
                 getnowtime(){
