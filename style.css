@@ -1,0 +1,55 @@
+.up_head{
+    background-color:rgb(155, 154, 154);
+    height: 50px;
+    display:flex;
+    align-items: center;
+    padding: 0 20px;
+    margin: 20px 50px;
+    justify-content: space-between;
+}
+
+.up_left{
+    color:white;
+    font-size: 25px;
+    font-family: "KaiTi";
+}
+
+.up_right{
+    color: white;
+}
+.up_right:hover{
+    color: rgb(106, 153, 241);
+}
+
+.buttons{
+    margin: 10px 50px 10px;
+    display: flex;
+    gap: 5px;
+}
+.add{
+    margin: 10px 50px 10px;
+}
+
+.ll{
+    margin-right: 0;
+}
+
+.biaoge{
+    margin: 20px 50px;
+}
+
+.di_foot{
+    background-color:rgb(155, 154, 154);
+    height: 85px;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    margin: 20px 50px;
+    text-align: center;
+    justify-content: center;
+}
+
+.dizi{
+    color: white;
+    font-size: 15px;
+}

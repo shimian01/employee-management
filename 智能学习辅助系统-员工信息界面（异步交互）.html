@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tlias智能学习辅助系统</title>
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="up_head">
+        <span class="up_left">Tlias智能学习辅助系统</span>
+        <span class="up_right">退出登录</span>
+    </header>
+
+    <div id="app">
+        <button class="add" @click="addchild">添加员工信息</button>
+
+        <div class="buttons">
+
+            <label class="ll">姓名：</label>
+            <input  class="name_input" type="text" id="name" v-model="searchform.name" placeholder="请输入姓名">
+
+            <label class="ll">性别：</label>
+            <select class="ge_se" style="width: 150px;" v-model="searchform.gender">
+                <option value="" disabled selected>请选择</option>
+                <option value="1">男</option>
+                <option value="2">女</option>
+            </select>
+
+            <label class="ll">职位：</label>
+            <input type="text" id="job" v-model="searchform.job" placeholder="请输入职位">
+
+            <button class="find" v-on:click="search">查询</button>
+            <button class="clear" v-on:click="clear">清空</button>
+        </div>
+
+    <div class="biaoge">
+        <table border="1" cellspacing="0" cellpadding="10" style="width: 100%; text-align: center;">
+            <thead>
+                <tr>
+                    <th>姓名</th>
+                    <th>性别</th>
+                    <th>职位</th>
+                    <th>入职日期</th>
+                    <th>最后操作时间</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody class="table-body">
+                <tr v-for="(item, index) in items" :key="index">
+                    <td>{{item.name}}</td>
+                    <td>{{item.gender == 1 ? "男" : "女"}}</td>
+                    <td>{{item.job}}</td>
+                    <td>{{item.intime}}</td>
+                    <td>{{item.lasttime}}</td>
+                    <td><button class="change" @click="change(index)">修改</button><button class="delete" @click="chdelete(index)">删除</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<footer class="di_foot">
+    <p class="dizi">智能学习辅助系统<br>一切版权归我个人所有</p>
+</footer>
+    <script type="module" src="demo.js"></script>
+</body>
+</html>
